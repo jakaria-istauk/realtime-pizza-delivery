@@ -44,6 +44,8 @@ const PORT = process.env.PORT || 3000
 
 app.use(express.static('public'))
 
+app.use(express.json())
+
 //set template engine
 app.use(expressLayout);
 app.set('views', path.join(__dirname, '/resources/views'))

@@ -39,7 +39,7 @@ function cartController(){
                 cart.totalPrice = cart.totalPrice + req.body.price
             }
 
-            return res.json({data:'ok'})
+            return res.json({ totalQty:req.session.cart.totalQty })
         }
     }
 }

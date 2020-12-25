@@ -4,14 +4,14 @@ const cartController = require('../app/http/controllers/customers/cartController
 const api = require('laravel-mix');
 
 function initRoutes(app){
-    app.get('/', homeController().index);
+    app.get('/', homeController().index)
+    app.get('/login', authContoller().login)
+    app.post('/login', authContoller().userLogin)
+    app.get('/register', authContoller().register)
+    app.post('/register', authContoller().userRegister)
+    
 
     app.get('/cart', cartController().cart)
-
-    app.get('/login', authContoller().login)
-
-    app.get('/register', authContoller().register)
-
     app.post('/update-cart', cartController().update)
 }
 

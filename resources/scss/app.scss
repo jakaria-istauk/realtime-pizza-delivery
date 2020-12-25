@@ -39,6 +39,9 @@ section.hero {
         color: $pure;
         transition: $smooth;
     }
+    &:focus{
+        outline: none;
+    }
 }
 .btn-primary{
     background: $primary;

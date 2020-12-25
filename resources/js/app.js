@@ -13,6 +13,13 @@ function updateCart(pizza){
             progressBar: false,
             text: 'Item sdded to cart'
         }).show()
+    }).catch(err =>{
+        new Noty({
+            type: 'error',
+            timeout: 1000,
+            progressBar: false,
+            text: 'Something went wrong'
+        }).show()
     })
 }
 

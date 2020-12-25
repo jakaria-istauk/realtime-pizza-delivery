@@ -32,8 +32,6 @@ function init(passport){
                 done(err, user)
             })
         })
-
-        // req.user 
     }))
 }
 

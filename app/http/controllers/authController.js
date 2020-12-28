@@ -54,6 +54,9 @@ function authController(){
         },        
 
         userLogin( req, res, next ){
+            
+            const { email, password } = req.body 
+
             if(!email || !password ){
                 req.flash('error', 'All Fields are require')
                 return res.redirect('/login')
